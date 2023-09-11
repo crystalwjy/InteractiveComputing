@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"></script>
+    <script src="sketch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/addons/p5.sound.min.js"></script>
+    <style>
+      body{
+        background-color: honeydew;
+        text-align: center;
+        /* position: fixed; */
+      }
+      @font-face {
+        font-family: "snakeHeading";
+        src:url("assets/CabinSketch-Bold.ttf");
+      }
+      @font-face {
+        font-family: "docHeading";
+        src: url("assets/Dongle-Bold.ttf");
+      }
+      @font-face {
+        font-family: "bodyText";
+        src: url("assets/Dongle-Regular.ttf");
+      }
+
+      h1{
+        font-family: snakeHeading;
+        text-align: center;
+        font-size: 40pt;
+      }
+
+      #instructionButton button{
+        background-color: rgb(112,128,144);
+        color: rgb(245,255,250);
+        margin:20px;
+        font-size: 20px;
+      }
+
+      #canvas_container{
+        margin:10px;
+      }
+
+      h2{
+        font-family: docHeading;
+        font-size: 30pt;
+        text-align: center;
+      }
+
+      .doc{
+        margin-left:20%;
+        margin-right:20%;
+        text-align:justify;
+      }
+
+      p{
+        font-family: bodyText;
+        font-size: 25pt;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <h1>Snake Game</h1>
+    <div id="instructionButton">
+      <button type="button" onclick="alert('Different levels refer to different snake speed.\nUse W/A/S/D to control the movement of the snake.\nIf the snake hits the border, game ends.\nGLHF!')">Instruction</button>
+    </div>
+
+    <div id = "canvas_container"></div>
+
+    <div class="doc">
+      <h2>Overview</h2>
+      <p>This project was inspired by the classic snake game, where the user can control the snake to eat food and earn points. I want to recreate it because I sometimes saw people playing it in my other classes. I was also a player of Snake.io when it was popular back in high school time. Overall I think this game is easy to play and addictive.</p>
+      <p>The design of this game is relatively simple. The user can only control the snake by pressing W/A/S/D to eat the food. The score will add one point when the user collects the food. If the snake hits the border, then the game ends. This game has three difficulty levels, which refer to different snake movement speeds. It will be more challenging to control the snake when it moves faster.</p>
+      <p>GLHF!</p>
+    </div>
+  </body>
+
+</html>

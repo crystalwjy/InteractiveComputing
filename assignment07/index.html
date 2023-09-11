@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- load in the p5 core library -->
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"></script>
+
+
+    <!-- note that you can load the p5.js library locally as well -->
+    <!-- <script src="../../../js/p5.js"></script> -->
+
+    <!-- ml5 library -->
+   <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+
+    <!-- your custom sketch code -->
+    <script src="sketch.js"></script>
+
+    <!-- custom CSS styles for this page -->
+    <style>
+      @font-face{
+        font-family:"mcfont";
+        src:url("images/mclawsui.ttf")format("truetype");
+      }
+      @font-face{
+        font-family:"mctext";
+        src:url("images/Mcletters-yPn5.ttf")format("truetype");
+      }
+      body{
+        background-color:rgb(255,199,44);
+      }
+
+      h1{
+        color:rgb(218,41,28);
+        text-align:CENTER;
+        font-family:"mcfont";
+      }
+      p{
+        color:rgb(39,37,31);
+        font-size:20px;
+        text-align:CENTER;
+        padding:50px;
+        font-family:"mctext";
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1 >Assignment 07: Fries Only!</h1>
+    <p>Welcome to the game Fries Only! This game was created due to my love for McDonald's fries. You will get 1 point by eating the fries, but also deduct 1 point if you eat the hamburger.
+      The position of both fries and hamburger will change randomly with differentt frames.
+      <br>
+      This game uses live video and uses machine learning for feature tracking. It uses nose tracking and the mouth on the screen will move with the position detected with the user nose.
+    </p>
+
+    <div id="canvas_container">
+
+  </body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Stardew Valley Recreation</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"></script>
+    <script src="sketch.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/addons/p5.sound.js"></script>
+  </head>
+  <style media="screen">
+    @font-face{
+      font-family:"stardewText";
+      src:url("text.ttf")format("truetype");
+    }
+    @font-face{
+      font-family:"stardewTitle";
+      src:url("title.ttf")format("truetype");
+    }
+    *{
+      background-color:#59C9F1;
+    }
+    h1{
+      font-family: "stardewTitle";
+      text-align:center;
+      color:#DDA059;
+      text-shadow:-2px -2px 3px #6B3710, 2px 2px 3px #6B3710,2px -2px 0px #6B3710, -2px -2px 0px #6B3710;
+    }
+    h2{
+      font-family:"stardewText";
+      text-align:center;
+      color:#DDA059;
+      text-shadow:-1px -1px 2px #6B3710, 1px 1px 2px #6B3710,1px -1px 0px #6B3710, -1px -1px 0px #6B3710;
+    }
+    h3{
+      font-family:"stardewText";
+      text-align:center;
+      color:#B52121;
+    }
+    #proposal .textarea{
+      font-family:"stardewText";
+      font-size:20px;
+      text-align:justify;
+      margin-left:20%;
+      margin-right:20%;
+      color: #151152;
+    }
+    #visualization{
+      font-family:"stardewText";
+      text-align:center;
+      justify-content:center;
+      display:flex;
+      color: #151152;
+    }
+    #visualization .start{
+      margin:10px;
+    }
+    #visualization .character{
+      margin:10px;
+    }
+    #visualization .farm{
+      margin:10px;
+    }
+    #visualization .inventory{
+      margin:10px;
+    }
+    #visualization img{
+      width:300px;
+    }
+    #vrVersion{
+      font-family:"stardewText";
+      text-align:center;
+      justify-content:center;
+      display:flex;
+      color: #151152;
+    }
+    #vrVersion img{
+      width:300px;
+    }
+    #vrVersion .farm1{
+      margin:10px;
+    }
+    #vrVersion .interact{
+      margin:10px;
+    }
+    #vrVersion .first{
+      margin:10px;
+    }
+  </style>
+  <body>
+    <h1>Stardew Valley Recreation Proposal</h1>
+    <h2>Group Members: Isabel Chai & Crystal Wu</h2>
+    <div id = "canvas_container"></div>
+    <h3> - PROPOSAL - </h3>
+    <div id="proposal">
+      <div class="textarea">
+        <p>Since both of us had experiences of playing Stardew Valley before and were really interested in this game, we planned to recreate this game with the VR features. We may not create the whole six maps in the original game. We planned to choose only one map to develop, which probably is the standard farm or the beach farm. This recreation will also allow players to plant vegetables, fruits, and trees as well as fishing, raising animals and interacting with NPCs. The game mechanisms will be similar to the original game, in which the characters will die if they were beaten by the monsters and they will lose energy through working. The aesthetic style will still be pixel style, but the appearances of characters and the farm may change a little.
+        </p>
+        <p>We will use an array to store the tools and the objects, such as the seeds and fishes, that the characters obtain in the game and display them at the bottom of the screen. The inventory will also indicate whether the player is holding that object or not and will remove that object once the player has moved them to other storage places–such as the boxes–or the objects have been used up. The number of NPCs in our project may not be as many as those in the original games. We will select several essential ones such as Louis, Pierre, and Marnie to ensure that the players can buy and sell things as well as get essential items to develop the story lines. Moreover, this project will also allow the players to decorate their cabins and farm houses, but they cannot change the outside design of the buildings.
+        </p>
+        <p>Different from the version on PCs, the VR version of this game will change the view from the third-person point of view to the first person. The player will see their hands empty or holding objects (tools or objects) and interact with other players or NPCs face to face. The microphone will record some simple sentences from the users such as saying “Yes” or “No” to communicate with others. </p>
+      </div>
+      <h3> - PC VERSION - </h3>
+      <div id="visualization">
+        <div class="start">
+          <h5>START PAGE</h5>
+          <img src="images/startPage.png" alt="">
+        </div>
+        <div class="character">
+          <h5>CREATE CHARACTERS</h5>
+          <img src="images/character.jpeg" alt="">
+        </div>
+        <div class="inventory">
+          <h5>INVENTORY</h5>
+          <img src="images/inventroy.jpeg" alt="">
+        </div>
+        <div class="farm">
+          <h5>FARM OVERVIEW</h5>
+          <img src="images/farm.jpeg" alt="">
+          <p>p.s. Only One Form of Farm in Our Project</p>
+        </div>
+      </div>
+      <h3> - VR VERSION - </h3>
+      <div id="vrVersion">
+        <div class="farm1">
+          <h5>FARM OVERVIEW</h5>
+          <img src="images/vrFarm.jpeg" alt="">
+        </div>
+        <div class="interact">
+          <h5>INTERACTION WITH NPCS</h5>
+          <img src="images/vrInteract.jpeg" alt="">
+        </div>
+        <div class="first">
+          <h5>FIRST-PERSON VIEW</h5>
+          <img src="images/vrFirst.jpeg" alt="">
+          <p>Refer To Minecraft</p>
+        </div>
+      </div>
+      <br>
+      <h2>Project Update #1</h2>
+      <div class="textarea">
+        <p>This week, we created the start and character creation pages. For the start page, we used the original image from Stardew Valley. The user has the following functionality for the character creation page: input name, farm name, and favorite thing. On the left is an image where the user can control different values for visual elements. Users can adjust skin, hair, shirt, pants, and accessories. They can also adjust the color of these visual features with the slider.</p>
+        <p>For the next step, we plan to do the following:<br>
+            1. Write the storyline to introduce the game<br>
+            2. Create the home map for the user to move, click, use tools, open new window<br>
+            3. Create a list of activities: farming, fishing, buying items, building relationships with other people, raising animals<br>
+            4. Create a store page for users to spend coins and purchase items<br></p>
+      </div>
+
+      <div id="visualization">
+        <div class="start">
+          <h5>Character creation page</h5>
+          <img src="images/update1.png" alt="Character creation page">
+        </div>
+
+        <div class="character">
+          <h5>Future key functionalities</h5>
+          <img src="images/update2.png" alt="future key functionalities">
+        </div>
+      </div>
+
+      <br>
+      <h2>Project Update #2</h2>
+      <div class="textarea">
+        <p>This week, we successfully stored the user input of name, farm name, and favorite thing and displayed the user input in the introduction dialogues. We also created the overhead map and the player inside the canvas, so the user can always be at the center of the screen, and the map will move with a specific offset. In addition, we have a basic user home, which the user can move around and switch tools at the bottom of the screen. For the next step, we plan to do the color-based collision to check if the user can enter a specific part of the map.</p>
+        <p>Challenges:<br>
+          1. We need to set a border for the overhead map so if the user reaches the top, the background doesn’t become white.<br>
+          2. The character image doesn’t show up when we move with the diaglogue progress, but it shows when we directly move to stage 3 (the home stage)<br>
+          3. Same as the last problem, the hover on the tools are a little bit off when we follow the dialogue, but it is fine when we move directly to stage 3 (might be the same issue)<br>
+        </p>
+      </div>
+
+      <div id="visualization">
+        <div class="start">
+          <h5>Dialogue page with user input</h5>
+          <img src="images/up2.png" alt="Dialogue page with user input">
+        </div>
+
+        <div class="start">
+          <h5>Character home</h5>
+          <img src="images/up3.png" alt="character home">
+        </div>
+
+        <div class="start">
+          <h5>Challenge 1: Map area needs a border</h5>
+          <img src="images/up4.png" alt="map area needs a border">
+        </div>
+
+      </div>
+
+    </div>
+  </body>
+</html>

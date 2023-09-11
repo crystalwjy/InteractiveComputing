@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"></script>
+    <script src="sketch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/addons/p5.sound.min.js"></script>
+    <style>
+      body{
+        background-color: AliceBlue;
+        font-family: myFont;
+      }
+      @font-face {
+        font-family: "myFont";
+        src: url("assets/Orbitron-VariableFont_wght.ttf");
+      }
+      h1{
+        text-align: center;
+        color: DarkBlue;
+      }
+      .overview h2{
+        text-align: center;
+        color: DarkBlue;
+      }
+      .overview p{
+        font-size: 15pt;
+        text-align: center;
+        color: BlueViolet;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Robots</h1>
+    <div id="canvas_container"></div>
+    <div class="overview">
+      <h2>Overview</h2>
+      <p>Welcome to the Robot Game.</p>
+      <p>Click the arrow to control the movement of the robot. The arrow locks after the fifth click.</p>
+      <p>If the robot enters the yellow door on the right, you will score 1 point.</p>
+      <p>GLHF!</p>
+    </div>
+  </body>
+</html>
